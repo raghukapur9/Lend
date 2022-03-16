@@ -45,7 +45,7 @@ contract Migrations {
         address _collateral_address
     ) public {
         require((_ltv_min > 0 && _ltv_max > 0 && _ltv_max > _ltv_min), "LTV min should be more than 0");
-        require((_loan_duration > 0), "Loan duration should be greater than 0 months");
+        require((_loan_duration > 0), "loan duration should be greater than 0 months");
         require((_interest_rate_min > 0 && _interest_rate_max > 0  && _interest_rate_max > _interest_rate_min), "Interest rate should be more than 0 and interest rate max value should be greater than interest rate min");
         require((_collateral > 0), "Collateral should be more than 0");
         require((_stable_coin_address != address(0) && _collateral_address != address(0)), "stable coin address should not be 0");
